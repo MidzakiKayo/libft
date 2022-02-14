@@ -63,7 +63,7 @@ CC := gcc
 CFLAGS := -Wall -Wextra -Werror -c
 
 all: obj $(NAME)
-
+	@echo "compiling libft..."
 obj: $(SRCS)
 
 .c.o:
