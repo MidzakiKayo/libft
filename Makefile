@@ -67,17 +67,17 @@ all: obj $(NAME)
 obj: $(SRCS)
 
 .c.o:
-	$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
+	@$(CC) $(FLAGS) -c $< -o $(<:.c=.o)
 
 $(NAME): $(OBJS)
-		$(LIBC) $(NAME) $(OBJS)
-		$(LIBR) $(NAME)
+		@$(LIBC) $(NAME) $(OBJS)
+		@$(LIBR) $(NAME)
 
 clean:
-		rm -f $(OBJS)
+		@rm -f $(OBJS)
 
 fclean: clean
-		rm -f $(NAME)
+		@rm -f $(NAME)
 
 re: fclean all
 
